@@ -1,0 +1,41 @@
+{
+	"name": "wikipedia-peek",
+	"version": "2.8.7",
+	"title": "Wikipedia Peek",
+	"description": "Browser extension that shows previews of linked articles on Wikipedia pages",
+	"author": "Niklas Gollenstede",
+	"license": "MPL-2.0",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/NiklasGollenstede/wikipedia-peek"
+	},
+	"contributions": [
+		{
+			"what": { "name": "Readability.js", "url": "https://github.com/mozilla/readability" },
+			"who": "Mozilla",
+			"license": { "name": "Apache-2.0", "url": "https://www.apache.org/licenses/LICENSE-2.0" }
+		}
+	],
+
+	"dependencies": {
+		"es6lib": "0.0.2",
+		"readability": "mozilla/readability#1369f92",
+		"regexpx": "0.1.4",
+		"web-ext-build": "0.0.8",
+		"web-ext-utils": "0.0.19"
+	},
+	"devDependencies": {
+		"babel-eslint": "7.1.1",
+		"eslint": "3.14.1",
+		"eslintrc": "NiklasGollenstede/eslintrc#3872881"
+	},
+	"scripts": {
+		"postinstall": "npm start",
+		"start": "web-ext-build",
+		"lint": "eslint --ignore-path .gitignore .",
+		"sign": "web-ext-build {beta:$APPVEYOR_BUILD_NUMBER,sign:1}"
+	},
+	"eslintConfig": {
+		"extends": "./node_modules/eslintrc/web-ext.js"
+	}
+}
