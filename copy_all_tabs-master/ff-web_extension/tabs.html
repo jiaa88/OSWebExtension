@@ -2,45 +2,103 @@
 
 <html>
   <head>
-    <meta charset="utf-8">
-    <link rel="stylesheet" href="tabs.css"/>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="tabs.css"/
+    <style type="text/css">
+      body {
+        font-family: Arial;
+        min-width: 300px;
+        max-width: 500px;
+      }
+      .row {
+        align-items: center;
+        display: flex;
+        margin: 10px 0;
+        padding-bottom: 10px;
+        border-bottom: 1px solid #888;
+      }
+      .row > div {
+        cursor: pointer;
+        min-width: 50px;
+        text-align: center;
+        word-wrap: break-word;
+      }
+      .row > div:last-child {
+        text-align: left;
+      }
+      .checkTodo {
+        visibility: hidden;
+      }
+      .IAmDone > div:last-child {
+        text-decoration: line-through;
+      }
+      .IAmDone .checkTodo {
+        visibility: visible;
+      }
+      #taskMaker {
+        position: relative;
+      }
+      .addTask {
+        cursor: pointer;
+        display: block;
+        background: #888;
+        text-align: center;
+        padding: 5px 10px;
+        color: #fff;
+      }
+      textarea {
+        width: calc(100% - 12px);
+        min-height: 50px;
+        border: 1px solid #b8b8b8;
+        padding: 5px;
+      }
+    </style>
   </head>
 
-<body>
-  <div class="panel">
+  <body>
+    <div class="panel">
+      <div class="panel-section panel-section-header">
+        <a href="#" class="action" id="tabs-paste">Paste the Tabs</a><br />
+        <a href="#" class="action" id="tabs-copy">Copy the Tabs</a><br />
+      </div>
 
-    <div class="panel-section panel-section-header">
-      <a href="#" class="action" id="tabs-paste">Paste Tabs</a><br>
-      <a href="#" class="action" id="tabs-copy">Copy Tabs</a><br>
+      <div class="current-tab">
+        <form>
+          <a
+            href="#"
+            class="arrow"
+            id="tabs-move-beginning"
+            title="Move tab first"
+            >«</a
+          >
+
+          <label>Tab</label>
+          <input type="input" id="position" size="2" />
+          <span id="window_total"></span>
+          <a href="#" id="update">Update</a>
+
+          <a href="#" class="arrow" id="tabs-move-end" title="Move tab last"
+            >»</a
+          >
+        </form>
+      </div>
+
+      <div class="panel-section-separator"></div>
+
+      <div class="details">
+        <a href="#" id="open-options" title="Settings"
+          ><img id="open-options" src="images/settings.svg"
+        /></a>
+        <div class="copy-all-tabs">Copy All Tabs <span id="total"></span></div>
+      </div>
+      <div id="message"></div>
+      <div id="taskMaker">
+        <textarea placeholder="Paste here" rows="4" cols="50"></textarea>
+        <a class="addTask">SAVE IT!</a>
+      </div>
     </div>
 
-    <div class="current-tab">
-        
-      <form>
-        <a href="#" class="arrow" id="tabs-move-beginning" title="Move tab first">«</a>
-      
-        <label>Tab</label>
-        <input type="input" id="position" size="2"/>      
-        <span id="window_total"></span>
-        <a href="#" id="update">Update</a>
-        
-        <a href="#" class="arrow" id="tabs-move-end" title="Move tab last">»</a>
-      </form>
-      
-    </div>
-
-    <div class="panel-section-separator"></div>
-
-
-    <div class="details">
-      <a href="#" id="open-options" title="Settings"><img id="open-options" src="images/settings.svg"></a>
-      <div class="copy-all-tabs">Copy All Tabs <span id="total"></span></div>
-    </div>
-    <div id="message"></div>
-
-  </div>
-
-  <script src="tabs.js"></script>
-</body>
-
+    <script src="script.js"></script>
+    <script src="tabs.js"></script>
+  </body>
 </html>
