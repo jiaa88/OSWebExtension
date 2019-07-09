@@ -52,35 +52,46 @@
         border: 1px solid #b8b8b8;
         padding: 5px;
       }
+
+      .spacing {
+        margin-left: 5px;
+        width: 50%;
+        padding: 10px;
+      }
+
+      .spacing1 {
+        margin-left: 15px;
+        padding: 10px;
+      }
     </style>
   </head>
 
   <body>
+    <div class="spacing1"></div>
+
+    <div class="current-tab">
+      <form>
+        <a
+          href="#"
+          class="arrow"
+          id="tabs-move-beginning"
+          title="Move tab first"
+          >«</a
+        >
+
+        <label>Tab</label>
+        <input type="input" id="position" size="2" />
+        <span id="window_total"></span>
+        <a href="#" id="update">Update Tab</a>
+
+        <a href="#" class="arrow" id="tabs-move-end" title="Move tab last">»</a>
+      </form>
+    </div>
+
     <div class="panel">
       <div class="panel-section panel-section-header">
         <a href="#" class="action" id="tabs-paste">Paste the Tabs</a><br />
         <a href="#" class="action" id="tabs-copy">Copy the Tabs</a><br />
-      </div>
-
-      <div class="current-tab">
-        <form>
-          <a
-            href="#"
-            class="arrow"
-            id="tabs-move-beginning"
-            title="Move tab first"
-            >«</a
-          >
-
-          <label>Tab</label>
-          <input type="input" id="position" size="2" />
-          <span id="window_total"></span>
-          <a href="#" id="update">Update</a>
-
-          <a href="#" class="arrow" id="tabs-move-end" title="Move tab last"
-            >»</a
-          >
-        </form>
       </div>
 
       <div class="panel-section-separator"></div>
