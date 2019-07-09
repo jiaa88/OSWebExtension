@@ -11,8 +11,8 @@ Firefox Extension Source: https://addons.mozilla.org/en-US/firefox/addon/youtube
 <p>Web Extension three: save all tabs</p>
 <p> First sub-task: 15/06/2019 - Haslinda </p>
 Firefox Extension Source: https://addons.mozilla.org/en-US/firefox/addon/copy-all-tabs/
-Enhancement #1: #07/09/2019 - vanessa updated code to save all tabs extension
-Enhancement #2: #07/09/2019 - vanessa have done.
-1.music feature of save all tab extension
-2.beatify the layout
+<p>Enhancement #1: #07/09/2019 - vanessa updated code to save all tabs extension</p>
+<p>Enhancement #2: #07/09/2019 - vanessa have done.</p>
+<p>1.music feature of save all tab extension</p>
+<p>2.beatify the layout</p>
  
