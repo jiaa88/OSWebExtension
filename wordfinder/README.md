@@ -2,8 +2,7 @@
 > Original Source Link: https://addons.mozilla.org/en-US/firefox/addon/find-in-page-with-preview/?src=search
 
 
-Extra function add in: Save function:Allow users to save current finding into button list.
-+ Pre-setting keywords: Allow users to preset a set of keywords, before searching.
+Extra function add in: Save function:Allow users to save current finding into button list to search later again.
   
 Purpose for these:
 - To speed up finding in page process.
